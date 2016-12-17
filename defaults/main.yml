@@ -1,0 +1,29 @@
+---
+# defaults freebsd-dhcp
+
+freebsd_install_method: "packages"
+#freebsd_install_method: "ports"
+#freebsd_use_packages: "yes"
+
+bsd_dhcp_version: "43"
+bsd_dhcp_packages:
+  - "isc-dhcp{{ bsd_dhcp_version }}-server"
+
+bsd_dhcpd_enable: "NO"
+bsd_dhcpd_service: "isc-dhcpd"
+
+bsd_dhcpd_domain_name_servers: ""
+bsd_dhcpd_domain_name: "localnet.localdomain"
+bsd_dhcpd_netbios_name_servers: ""
+
+bsd_dhcpd_wired_lan_subnet: "10.1.1"
+bsd_dhcpd_wired_lan_netmask: "255.255.255.0"
+bsd_dhcpd_wired_lan_routers: "10.1.1.1"
+bsd_dhcpd_wireless_subnet: "10.1.0"
+bsd_dhcpd_wireless_netmask: "255.255.255.0"
+bsd_dhcpd_wireless_routers: "10.1.0.12"
+
+bsd_dhcpd_assigned_ip: []
+
+# EOF
+...
