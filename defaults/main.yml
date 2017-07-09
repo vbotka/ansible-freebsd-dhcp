@@ -16,6 +16,7 @@ bsd_dhcpd_domain_name_servers: ""
 bsd_dhcpd_domain_name: "localnet.localdomain"
 bsd_dhcpd_netbios_name_servers: ""
 
+bsd_dhcpd_template: "dhcpd.conf.j2"
 bsd_dhcpd_wired_lan_subnet: "10.1.1"
 bsd_dhcpd_wired_lan_netmask: "255.255.255.0"
 bsd_dhcpd_wired_lan_routers: "10.1.1.1"

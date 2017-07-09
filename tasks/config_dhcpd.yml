@@ -1,9 +1,9 @@
 ---
 
-- name: Configure /usr/local/etc/dhcpd.conf
+- name: Configure /usr/local/etc/dhcpd.conf from {{ bsd_dhcpd_template }}
   template: >
     dest="/usr/local/etc/dhcpd.conf"
-    src="dhcpd.conf.j2"
+    src="{{ bsd_dhcpd_template }}"
     owner="root"
     group="wheel"
     mode="0644"
