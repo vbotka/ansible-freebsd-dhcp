@@ -8,7 +8,7 @@
     group="wheel"
     mode="0644"
     backup="yes"
-  with_dict: bsd_dhcpd_assigned_ip
+  with_dict: "{{ bsd_dhcpd_assigned_ip }}"
   notify: restart dhcpd
   tags: config_dhcpd
   
