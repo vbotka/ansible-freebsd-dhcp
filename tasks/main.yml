@@ -4,6 +4,7 @@
 - include: packages.yml
   tags:
     - bsd_packages
+    - bsd_ports
     - bsd_dhcp_all
 
 - include: config_rc_conf.yml
