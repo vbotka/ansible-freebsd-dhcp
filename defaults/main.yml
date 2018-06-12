@@ -9,7 +9,8 @@ bsd_dhcp_version: "43"
 bsd_dhcp_packages:
   - "isc-dhcp{{ bsd_dhcp_version }}-server"
 
-bsd_dhcpd_enable: "NO"
+bsd_dhcpd_debug: False
+bsd_dhcpd_enable: False
 bsd_dhcpd_service: "isc-dhcpd"
 
 bsd_dhcpd_domain_name_servers: ""

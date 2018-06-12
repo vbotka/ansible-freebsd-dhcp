@@ -1,21 +1,20 @@
 ---
 
-- name: Install dhcp (packages)
-  pkgng: >
-    name="{{item}}"
-    state="present"
+- name: "packages: Install dhcp packages"
+  pkgng:
+    name: "{{item}}"
+    state: "present"
   with_items: "{{bsd_dhcp_packages}}"
   when: freebsd_install_method == "packages"
-  tags: bsd_packages
 
-- name: Install dhcp (ports)
-  portinstall: >
-    name="{{item}}"
-    state="present"
-    use_packages="{{freebsd_use_packages}}"
+- name: "packages: Install dhcp ports"
+  portinstall:
+    name: "{{item}}"
+    state: "present"
+    use_packages: "{{freebsd_use_packages}}"
   with_items: "{{bsd_dhcp_packages}}"
   when: freebsd_install_method == "ports"
-  tags: bsd_ports
+
 
 # EOF
 ...
