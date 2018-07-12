@@ -8,6 +8,7 @@
     group: "wheel"
     mode: "0644"
     backup: yes
+    validate: "/usr/local/sbin/dhcpd -t -cf %s"
   with_dict: "{{ bsd_dhcpd_assigned_ip }}"
   notify: restart dhcpd
   

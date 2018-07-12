@@ -1,7 +1,7 @@
 ---
 galaxy_info:
   author: Vladimir Botka
-  description: Install and configure DHCP server in FreeBSD
+  description: FreeBSD. Install and configure DHCP server.
   company: https://botka.link
   github_branch: master
   license: BSD
@@ -9,8 +9,8 @@ galaxy_info:
   platforms:
     - name: FreeBSD
       versions:
-        - 10.3
-        - 11.1
+        - 10.4
+        - 11.2
   galaxy_tags:
     - freebsd
     - dhcp
