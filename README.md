@@ -1,4 +1,4 @@
-freebsd-dhcp
+freebsd_dhcp
 ============
 
 [![Build Status](https://travis-ci.org/vbotka/ansible-freebsd-dhcp.svg?branch=master)](https://travis-ci.org/vbotka/ansible-freebsd-dhcp)
