@@ -1,5 +1,6 @@
 ---
 galaxy_info:
+  role_name: freebsd_dhcp
   author: Vladimir Botka
   description: FreeBSD. Install and configure DHCP server.
   company: https://botka.link

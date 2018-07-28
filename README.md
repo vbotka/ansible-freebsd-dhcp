@@ -3,7 +3,7 @@ freebsd-dhcp
 
 [![Build Status](https://travis-ci.org/vbotka/ansible-freebsd-dhcp.svg?branch=master)](https://travis-ci.org/vbotka/ansible-freebsd-dhcp)
 
-[Ansible role.](https://galaxy.ansible.com/vbotka/freebsd-dhcp/) Configure DHCP in FreeBSD.
+[Ansible role.](https://galaxy.ansible.com/vbotka/freebsd_dhcp/) Configure DHCP in FreeBSD.
 
 
 Requirements
@@ -31,13 +31,13 @@ ansible do-bsd-test -e 'ansible_shell_type=csh ansible_shell_executable=/bin/csh
 2) Install role.
 
 ```
-ansible-galaxy install vbotka.freebsd-dhcp
+ansible-galaxy install vbotka.freebsd_dhcp
 ```
 
 3) Fit variables.
 
 ```
-~/.ansible/roles/vbotka.freebsd-dhcp/vars/main.yml
+~/.ansible/roles/vbotka.freebsd_dhcp/vars/main.yml
 ```
 
 4) Create and run the playbook.
@@ -49,7 +49,7 @@ ansible-galaxy install vbotka.freebsd-dhcp
   become: yes
   become_method: sudo
   roles:
-    - role: vbotka.ansible-freebsd-dhcp
+    - role: vbotka.freebsd_dhcp
     
 > ansible-playbook ~/.ansible/playbooks/freebsd-dhcp.yml
 ```
