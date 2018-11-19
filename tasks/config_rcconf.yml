@@ -8,7 +8,7 @@
     backup: yes
   notify: enable and start dhcpd
   when: bsd_dhcpd_enable
-  
+
 - name: "rcconf: Disable and stop dhcpd"
   lineinfile:
     dest: "/etc/rc.conf"
