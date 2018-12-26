@@ -14,8 +14,6 @@
          freebsd_install_method [ {{ freebsd_install_method }} ]
          freebsd_use_packages [ {{ freebsd_use_packages }} ]
          bsd_dhcp_version [ {{ bsd_dhcp_version }} ]
-         bsd_dhcp_packages [
-         {{ bsd_dhcp_packages | to_nice_yaml }} ]
          bsd_dhcpd_enable [ {{ bsd_dhcpd_enable }} ]
          bsd_dhcpd_service [ {{ bsd_dhcpd_service }} ]
          bsd_dhcpd_domain_name_servers [ {{ bsd_dhcpd_domain_name_servers }} ]
@@ -28,8 +26,10 @@
          bsd_dhcpd_wireless_subnet [ {{ bsd_dhcpd_wireless_subnet }} ]
          bsd_dhcpd_wireless_netmask [ {{ bsd_dhcpd_wireless_netmask }} ]
          bsd_dhcpd_wireless_routers [ {{ bsd_dhcpd_wireless_routers }} ]
-         bsd_dhcpd_assigned_ip [
-         {{ bsd_dhcpd_assigned_ip | to_nice_yaml }} ]
+         bsd_dhcpd_assigned_ip
+         {{ bsd_dhcpd_assigned_ip | to_nice_yaml }}
+         bsd_dhcp_packages
+         {{ bsd_dhcp_packages | to_nice_yaml }}
   debug:
     msg: "{{ msg.split('\n') }}"
 
