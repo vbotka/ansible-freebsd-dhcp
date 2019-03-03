@@ -1,15 +1,14 @@
 ---
 
-- name: >
-    "config_dhcpcd: Configure /usr/local/etc/dhcpd.conf
-    from {{ bsd_dhcpd_template }}"
+- name: "config_dhcpcd: Configure /usr/local/etc/dhcpd.conf
+         from {{ bsd_dhcpd_template }}"
   template:
     dest: "/usr/local/etc/dhcpd.conf"
     src: "{{ bsd_dhcpd_template }}"
     owner: "root"
     group: "wheel"
     mode: "0644"
-    backup: yes
+    backup: "{{ bsd_dhcpd_backup_conf }}"
     validate: "/usr/local/sbin/dhcpd -t -cf %s"
   with_dict: "{{ bsd_dhcpd_assigned_ip }}"
   notify: restart dhcpd

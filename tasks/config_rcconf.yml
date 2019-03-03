@@ -3,18 +3,18 @@
 - name: "rcconf: Enable and start dhcpd"
   lineinfile:
     dest: "/etc/rc.conf"
-    regexp: "^dhcpd_enable"
+    regexp: "^\\s*dhcpd_enable\\s*="
     line: "dhcpd_enable=\"YES\""
-    backup: yes
+    backup: "{{ bsd_dhcpd_backup_conf }}"
   notify: enable and start dhcpd
   when: bsd_dhcpd_enable
 
 - name: "rcconf: Disable and stop dhcpd"
   lineinfile:
     dest: "/etc/rc.conf"
-    regexp: "^dhcpd_enable"
+    regexp: "^\\s*dhcpd_enable\\s*="
     line: "dhcpd_enable=\"NO\""
-    backup: yes
+    backup: "{{ bsd_dhcpd_backup_conf }}"
   notify: disable and stop dhcpd
   when: not bsd_dhcpd_enable
 

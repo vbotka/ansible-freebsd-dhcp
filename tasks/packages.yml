@@ -13,7 +13,7 @@
 - name: "packages: Install dhcp ports"
   portinstall:
     name: "{{ item }}"
-    use_packages: "{{ freebsd_use_packages }}"
+    use_packages: "{{ freebsd_use_packages|default(True) }}"
   loop: "{{ bsd_dhcp_packages }}"
   register: result
   retries: "{{ freebsd_install_retries }}"

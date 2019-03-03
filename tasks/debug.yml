@@ -6,15 +6,18 @@
          ansible_architecture [ {{ ansible_architecture }} ]
          ansible_os_family [ {{ ansible_os_family }} ]
          ansible_distribution [ {{ ansible_distribution }} ]
-         ansible_distribution_major_version
-         [ {{ ansible_distribution_major_version }} ]
+         ansible_distribution_major_version [ {{ ansible_distribution_major_version }} ]
          ansible_distribution_version [ {{ ansible_distribution_version }} ]
          ansible_distribution_release [ {{ ansible_distribution_release }} ]
 
          freebsd_install_method [ {{ freebsd_install_method }} ]
-         freebsd_use_packages [ {{ freebsd_use_packages }} ]
-         bsd_dhcp_version [ {{ bsd_dhcp_version }} ]
+         freebsd_use_packages [ {{ freebsd_use_packages|default(True) }} ]
+         freebsd_install_retries [ {{ freebsd_install_retries }} ]
+         freebsd_install_delay [ {{ freebsd_install_delay }} ]
+
          bsd_dhcpd_enable [ {{ bsd_dhcpd_enable }} ]
+         bsd_dhcpd_backup_conf [ {{ bsd_dhcpd_backup_conf }} ]
+         bsd_dhcp_version [ {{ bsd_dhcp_version }} ]
          bsd_dhcpd_service [ {{ bsd_dhcpd_service }} ]
          bsd_dhcpd_domain_name_servers [ {{ bsd_dhcpd_domain_name_servers }} ]
          bsd_dhcpd_domain_name [ {{ bsd_dhcpd_domain_name }} ]
