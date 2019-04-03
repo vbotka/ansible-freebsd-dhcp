@@ -65,3 +65,11 @@ Author Information
 ------------------
 
 [Vladimir Botka](https://botka.link)
+
+References
+----------
+
+- [FreeBSD handbook: 29.6. Dynamic Host Configuration Protocol (DHCP)](https://www.freebsd.org/doc/handbook/network-dhcp.html)
+- [Highly Available DHCP Server on FreeBSD](https://medium.com/@vermaden/highly-available-dhcp-server-on-freebsd-2bf81a5e4e77)
+- [man dhcpd(8)](https://www.freebsd.org/cgi/man.cgi?query=dhcpd)
+- [man dhcpd.conf(5)](https://www.freebsd.org/cgi/man.cgi?query=dhcpd.conf)
