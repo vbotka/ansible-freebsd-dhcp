@@ -73,3 +73,4 @@ References
 - [Highly Available DHCP Server on FreeBSD](https://medium.com/@vermaden/highly-available-dhcp-server-on-freebsd-2bf81a5e4e77)
 - [man dhcpd(8)](https://www.freebsd.org/cgi/man.cgi?query=dhcpd)
 - [man dhcpd.conf(5)](https://www.freebsd.org/cgi/man.cgi?query=dhcpd.conf)
+- [FreeBSD Forum: pf.conf rules for dhcp](https://forums.freebsd.org/threads/pf-conf-rules-for-dhcp.15213/)
