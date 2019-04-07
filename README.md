@@ -54,6 +54,15 @@ ansible-galaxy install vbotka.freebsd_dhcp
 > ansible-playbook ~/.ansible/playbooks/freebsd-dhcp.yml
 ```
 
+Firewall
+--------
+
+Add the following rules to /etc/pf.conf
+
+```
+dhcp_ports="{ bootps, bootpc }"
+pass quick on $if proto { tcp, udp } to $if port $dhcp_ports
+```
 
 License
 -------

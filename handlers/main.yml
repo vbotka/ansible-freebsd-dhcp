@@ -1,5 +1,5 @@
 ---
-# handlers freebsd-dhcp
+# handlers freebsd_dhcp
 
 - name: enable and start dhcpd
   service:

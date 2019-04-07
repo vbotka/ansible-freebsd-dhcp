@@ -1,5 +1,5 @@
 ---
-# tasks freebsd-dhcp
+# tasks freebsd_dhcp
 
 - import_tasks: debug.yml
   when: bsd_dhcpd_debug
