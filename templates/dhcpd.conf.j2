@@ -34,7 +34,7 @@ option subnet-mask {{ bsd_dhcpd_wireless_netmask }};
 option routers {{ bsd_dhcpd_wireless_routers }};
 }
 
-{% for (key, value) in bsd_dhcpd_assigned_ip|dictsort %}
+{% for (key, value) in bsd_dhcpd_assigned_ip %}
 host {{ key }} {
         hardware ethernet {{ value.mac }};
         fixed-address {{ value.ip }};
