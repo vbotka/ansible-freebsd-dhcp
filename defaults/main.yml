@@ -11,10 +11,13 @@ freebsd_install_method: "packages"
 freebsd_install_retries: 10
 freebsd_install_delay: 5
 
+# dhcp
+bsd_dhcp_install: true
 bsd_dhcp_version: "44"
 bsd_dhcp_packages:
   - "net/isc-dhcp{{ bsd_dhcp_version }}-server"
 
+# dhcpd
 bsd_dhcpd_service: "isc-dhcpd"
 bsd_dhcpd_template: "dhcpd.conf.j2"
 

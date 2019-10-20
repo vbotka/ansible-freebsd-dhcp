@@ -2,10 +2,11 @@
 # tasks freebsd_dhcp
 
 - import_tasks: debug.yml
-  when: bsd_dhcpd_debug
+  when: bsd_dhcpd_debug|bool
   tags: [dhcp_debug, always]
 
 - import_tasks: packages.yml
+  when: bsd_dhcp_install|bool
   tags: dhcp_packages
 
 - import_tasks: config_rcconf.yml
