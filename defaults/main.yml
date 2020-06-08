@@ -1,21 +1,23 @@
 ---
 # defaults freebsd_dhcp
 
+bsd_dhcpd_install: true
+bsd_dhcpd_sanity: true
+bsd_dhcpd_sanity_fatal: true
 bsd_dhcpd_enable: false
 bsd_dhcpd_debug: false
 bsd_dhcpd_backup_conf: false
 
-freebsd_install_method: "packages"
-# freebsd_install_method: "ports"
-# freebsd_use_packages: True
+freebsd_install_method: packages
+# freebsd_install_method: ports
+freebsd_use_packages: true
 freebsd_install_retries: 10
 freebsd_install_delay: 5
 
-# dhcp
-bsd_dhcp_install: true
-bsd_dhcp_version: "44"
-bsd_dhcp_packages:
-  - "net/isc-dhcp{{ bsd_dhcp_version }}-server"
+# packages
+bsd_dhcpd_version: "44"
+bsd_dhcpd_packages:
+  - "net/isc-dhcp{{ bsd_dhcpd_version }}-server"
 
 # dhcpd
 bsd_dhcpd_service: "isc-dhcpd"

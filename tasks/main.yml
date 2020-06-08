@@ -1,19 +1,22 @@
 ---
 # tasks freebsd_dhcp
 
+- import_tasks: sanity.yml
+  tags: [bsd_dhcp_sanity, always]
+
 - import_tasks: debug.yml
   when: bsd_dhcpd_debug|bool
-  tags: [dhcp_debug, always]
+  tags: [bsd_dhcp_debug, always]
 
 - import_tasks: packages.yml
-  when: bsd_dhcp_install|bool
-  tags: dhcp_packages
+  when: bsd_dhcpd_install|bool
+  tags: bsd_dhcp_packages
 
-- import_tasks: config_rcconf.yml
-  tags: dhcp_rcconf
+- import_tasks: rcconf.yml
+  tags: bsd_dhcp_rcconf
 
-- import_tasks: config_dhcpd.yml
-  tags: dhcp_conf
+- import_tasks: conf.yml
+  tags: bsd_dhcp_conf
 
 # EOF
 ...
