@@ -16,4 +16,6 @@ galaxy_info:
     - freebsd
     - dhcp
 dependencies: []
+collections:
+  - community.general
 ...
