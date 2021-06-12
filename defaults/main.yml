@@ -20,11 +20,11 @@ bsd_dhcpd_packages:
   - "net/isc-dhcp{{ bsd_dhcpd_version }}-server"
 
 # dhcpd
-bsd_dhcpd_service: "isc-dhcpd"
-bsd_dhcpd_template: "dhcpd.conf.j2"
+bsd_dhcpd_service: isc-dhcpd
+bsd_dhcpd_template: dhcpd.conf.j2
 
 # global
-bsd_dhcpd_domain_name: "localnet.localdomain"
+bsd_dhcpd_domain_name: localnet.localdomain
 bsd_dhcpd_domain_name_servers: "ns1.example.org, ns2.example.org"
 bsd_dhcpd_netbios_name_servers: ""
 bsd_dhcpd_default_lease_time: "600"
@@ -32,7 +32,7 @@ bsd_dhcpd_max_lease_time: "7200"
 bsd_dhcpd_ddns_update_style: "none"
 bsd_dhcpd_always_broadcast: "on"
 bsd_dhcpd_authoritative: true
-bsd_dhcpd_log_facility: "local7"
+bsd_dhcpd_log_facility: local7
 
 # wired
 bsd_dhcpd_wired_lan_subnet: "10.1.1"
