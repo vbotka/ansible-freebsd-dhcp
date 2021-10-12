@@ -55,7 +55,7 @@
          bsd_dhcpd_packages
          {{ bsd_dhcpd_packages|to_nice_yaml }}
   ansible.builtin.debug:
-    msg: "{{ msg.split('\n') }}"
+    msg: "{{ '{}'.format(msg) }}"
 
 # EOF
 ...
