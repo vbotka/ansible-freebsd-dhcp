@@ -81,4 +81,4 @@ pass quick on $if proto { tcp, udp } to $if port $dhcp_ports
 
 ## Author Information
 
-[Vladimir Botka](https://botka.link)
+[Vladimir Botka](https://botka.info)
