@@ -25,35 +25,63 @@ Review the defaults and examples in vars.
 
 1) Change shell to /bin/sh
 
-```
-shell> ansible do-bsd-test -e 'ansible_shell_type=csh ansible_shell_executable=/bin/csh' -a 'sudo pw usermod freebsd -s /bin/sh'
+```bash
+shell> ansible dhcp.example.com -e 'ansible_shell_type=csh ansible_shell_executable=/bin/csh' -a 'sudo pw usermod freebsd -s /bin/sh'
 ```
 
 2) Install role
 
-```
+```bash
 shell> ansible-galaxy install vbotka.freebsd_dhcp
 ```
 
 3) Fit variables
 
-```
-shell> ~/.ansible/roles/vbotka.freebsd_dhcp/vars/main.yml
+```bash
+shell> editor vbotka.freebsd_dhcp/vars/main.yml
 ```
 
-4) Create and run the playbook
+4) Create the playbook
 
-```
-shell> cat ~/.ansible/playbooks/freebsd-dhcp.yml
----
-- hosts: do-bsd-tetst
-  become: yes
-  become_method: sudo
+```yaml
+shell> cat freebsd-dhcp.yml
+- hosts: dhcp.example.com
   roles:
     - role: vbotka.freebsd_dhcp
-    
-shell> ansible-playbook ~/.ansible/playbooks/freebsd-dhcp.yml
 ```
+
+5) Run the playbook
+
+Test the syntax
+
+```bash    
+shell> ansible-playbook --syntax-check  freebsd-dhcp.yml
+```
+
+Take a look at the variables
+
+```bash
+shell> ansible-playbook -t bsd_dhcpd_debug -e bsd_dhcpd_debug=true freebsd-dhcp.yml
+```
+
+Install packages
+
+```bash
+shell> ansible-playbook -t bsd_dhcpd_packages -e bsd_dhcpd_install=true freebsd-dhcp.yml
+```
+
+Dry run and see what will be configured
+
+```bash
+shell> ansible-playbook --check --diff freebsd-dhcp.yml
+```
+
+Run the play if this is what you want
+
+```bash
+shell> ansible-playbook freebsd-dhcp.yml
+```
+
 
 ## Firewall
 
@@ -81,4 +109,4 @@ pass quick on $if proto { tcp, udp } to $if port $dhcp_ports
 
 ## Author Information
 
-[Vladimir Botka](https://botka.link)
+[Vladimir Botka](https://botka.info)

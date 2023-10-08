@@ -6,9 +6,9 @@
     src: "{{ bsd_dhcpd_template }}"
     owner: root
     group: wheel
-    mode: "0644"
+    mode: '0644'
     backup: "{{ bsd_dhcpd_backup_conf }}"
-    validate: "/usr/local/sbin/dhcpd -t -cf %s"
+    validate: '/usr/local/sbin/dhcpd -t -cf %s'
   with_dict: "{{ bsd_dhcpd_assigned_ip }}"
   notify: restart dhcpd
 
