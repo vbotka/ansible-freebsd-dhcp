@@ -11,7 +11,7 @@
       ansible_python_version: {{ ansible_python_version }}
 
       freebsd_install_method: {{ freebsd_install_method }}
-      freebsd_use_packages: {{ freebsd_use_packages|default(True) }}
+      freebsd_use_packages: {{ freebsd_use_packages | d(true) }}
       freebsd_install_retries: {{ freebsd_install_retries }}
       freebsd_install_delay: {{ freebsd_install_delay }}
 
@@ -48,11 +48,11 @@
       bsd_dhcpd_wireless_subnet_broadcast: {{ bsd_dhcpd_wireless_subnet_broadcast }}
 
       bsd_dhcpd_assigned_ip:
-        {{ bsd_dhcpd_assigned_ip|to_yaml(indent=2)|indent(2) }}
+        {{ bsd_dhcpd_assigned_ip | to_yaml(indent=2) | indent(2) }}
 
       bsd_dhcpd_version: {{ bsd_dhcpd_version }}
       bsd_dhcpd_packages:
-        {{ bsd_dhcpd_packages|to_nice_yaml(indent=2)|indent(2) }}
+        {{ bsd_dhcpd_packages | to_nice_yaml(indent=2) | indent(2) }}
   ansible.builtin.debug:
     msg: "{{ '{}'.format(msg) }}"
 
