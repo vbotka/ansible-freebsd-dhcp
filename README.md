@@ -1,6 +1,6 @@
 # freebsd_dhcp
 
-[![quality](https://img.shields.io/ansible/quality/27910)](https://galaxy.ansible.com/vbotka/freebsd_dhcp)[![Build Status](https://travis-ci.org/vbotka/ansible-freebsd-dhcp.svg?branch=master)](https://travis-ci.org/vbotka/ansible-freebsd-dhcp)
+[![quality](https://img.shields.io/ansible/quality/27910)](https://galaxy.ansible.com/vbotka/freebsd_dhcp)[![Build Status](https://app.travis-ci.com/vbotka/ansible-freebsd-dhcp.svg?branch=master)](https://app.travis-ci.com/vbotka/ansible-freebsd-dhcp)[![GitHub tag](https://img.shields.io/github/v/tag/vbotka/ansible-freebsd-dhcp)](https://github.com/vbotka/ansible-freebsd-dhcp/tags)
 
 [Ansible role.](https://galaxy.ansible.com/vbotka/freebsd_dhcp/) Configure DHCP in FreeBSD.
 
@@ -23,19 +23,19 @@ Review the defaults and examples in vars.
 
 ## Workflow
 
-1) Change shell to /bin/sh
+1) Change shell on the remote host to /bin/sh if necessary
 
 ```bash
 shell> ansible dhcp.example.com -e 'ansible_shell_type=csh ansible_shell_executable=/bin/csh' -a 'sudo pw usermod freebsd -s /bin/sh'
 ```
 
-2) Install role
+2) Install the role
 
 ```bash
-shell> ansible-galaxy install vbotka.freebsd_dhcp
+shell> ansible-galaxy role install vbotka.freebsd_dhcp
 ```
 
-3) Fit variables
+3) Fit variables, for example, in vars
 
 ```bash
 shell> editor vbotka.freebsd_dhcp/vars/main.yml
@@ -54,7 +54,7 @@ shell> cat freebsd-dhcp.yml
 
 Test the syntax
 
-```bash    
+```bash
 shell> ansible-playbook --syntax-check  freebsd-dhcp.yml
 ```
 
@@ -76,7 +76,7 @@ Dry run and see what will be configured
 shell> ansible-playbook --check --diff freebsd-dhcp.yml
 ```
 
-Run the play if this is what you want
+If this is what you want run the play
 
 ```bash
 shell> ansible-playbook freebsd-dhcp.yml
@@ -85,7 +85,7 @@ shell> ansible-playbook freebsd-dhcp.yml
 
 ## Firewall
 
-Add the following rules to /etc/pf.conf
+If you use the PF firewall add the following rules to /etc/pf.conf
 
 ```
 dhcp_ports="{ bootps, bootpc }"
@@ -95,7 +95,7 @@ pass quick on $if proto { tcp, udp } to $if port $dhcp_ports
 
 ## References
 
-- [FreeBSD handbook: 29.6. Dynamic Host Configuration Protocol (DHCP)](https://www.freebsd.org/doc/handbook/network-dhcp.html)
+- [FreeBSD handbook: Dynamic Host Configuration Protocol (DHCP)](https://www.freebsd.org/doc/handbook/network-dhcp.html)
 - [Highly Available DHCP Server on FreeBSD](https://medium.com/@vermaden/highly-available-dhcp-server-on-freebsd-2bf81a5e4e77)
 - [man dhcpd(8)](https://www.freebsd.org/cgi/man.cgi?query=dhcpd)
 - [man dhcpd.conf(5)](https://www.freebsd.org/cgi/man.cgi?query=dhcpd.conf)
