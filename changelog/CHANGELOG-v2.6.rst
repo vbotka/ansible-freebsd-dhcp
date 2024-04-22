@@ -17,6 +17,7 @@ Major Changes
 
 Minor Changes
 -------------
+* Fix meta formatting.
 
 Bugfixes
 --------
