@@ -5,6 +5,26 @@ vbotka.freebsd_dhcp 2.6 Release Notes
 .. contents:: Topics
 
 
+2.6.1
+=====
+
+Release Summary
+---------------
+Bugfix release.
+
+Major Changes
+-------------
+
+Minor Changes
+-------------
+
+Bugfixes
+--------
+
+Breaking Changes / Porting Guide
+--------------------------------
+
+
 2.6.0
 =====
 
