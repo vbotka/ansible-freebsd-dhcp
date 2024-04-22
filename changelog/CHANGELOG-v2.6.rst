@@ -20,6 +20,7 @@ Minor Changes
 -------------
 * Update requirements.yml
 * Update README.
+* Update Ansible lint config.
 * Fix Ansible lint.
 
 Bugfixes
