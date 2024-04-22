@@ -19,6 +19,7 @@ Minor Changes
 -------------
 * Fix meta formatting.
 * Update README.
+* Use default rules in local ansible-lint
 
 Bugfixes
 --------
