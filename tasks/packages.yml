@@ -1,6 +1,5 @@
 ---
-
-- name: "packages: Install dhcp packages."
+- name: "Packages: Install dhcp packages."
   community.general.pkgng:
     name: "{{ item }}"
   loop: "{{ bsd_dhcpd_packages }}"
@@ -10,7 +9,7 @@
   delay: "{{ freebsd_install_delay }}"
   when: freebsd_install_method == 'packages'
 
-- name: "packages: Install dhcp ports."
+- name: "Packages: Install dhcp ports."
   community.general.portinstall:
     name: "{{ item }}"
     use_packages: "{{ freebsd_use_packages|default(true) }}"
@@ -22,4 +21,3 @@
   when: freebsd_install_method == 'ports'
 
 # EOF
-...
