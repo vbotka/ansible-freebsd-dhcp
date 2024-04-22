@@ -49,7 +49,6 @@
 
       bsd_dhcpd_assigned_ip:
         {{ bsd_dhcpd_assigned_ip | to_yaml(indent=2) | indent(2) }}
-
       bsd_dhcpd_version: {{ bsd_dhcpd_version }}
       bsd_dhcpd_packages:
         {{ bsd_dhcpd_packages | to_nice_yaml(indent=2) | indent(2) }}
