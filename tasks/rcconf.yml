@@ -5,7 +5,7 @@
     regexp: ^\s*dhcpd_enable\s*=(.*)$
     line: dhcpd_enable="YES"
     backup: "{{ bsd_dhcpd_backup_conf }}"
-  notify: enable and start dhcpd
+  notify: Enable and start dhcpd
   when: bsd_dhcpd_enable | bool
 
 - name: "Rcconf: Disable and stop dhcpd"
@@ -14,7 +14,7 @@
     regexp: ^\s*dhcpd_enable\s*=(.*)$
     line: dhcpd_enable="NO"
     backup: "{{ bsd_dhcpd_backup_conf }}"
-  notify: disable and stop dhcpd
+  notify: Disable and stop dhcpd
   when: not bsd_dhcpd_enable | bool
 
 # EOF
