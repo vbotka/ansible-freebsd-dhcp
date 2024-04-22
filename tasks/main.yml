@@ -7,12 +7,12 @@
 
 - name: Import debug.yml
   ansible.builtin.import_tasks: debug.yml
-  when: bsd_dhcpd_debug|bool
+  when: bsd_dhcpd_debug | bool
   tags: bsd_dhcpd_debug
 
 - name: Import packages.yml
   ansible.builtin.import_tasks: packages.yml
-  when: bsd_dhcpd_install|bool
+  when: bsd_dhcpd_install | bool
   tags: bsd_dhcpd_packages
 
 - name: Import rcconf.yml

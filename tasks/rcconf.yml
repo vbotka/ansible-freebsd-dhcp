@@ -6,7 +6,7 @@
     line: dhcpd_enable="YES"
     backup: "{{ bsd_dhcpd_backup_conf }}"
   notify: enable and start dhcpd
-  when: bsd_dhcpd_enable|bool
+  when: bsd_dhcpd_enable | bool
 
 - name: "Rcconf: Disable and stop dhcpd"
   ansible.builtin.lineinfile:
@@ -15,6 +15,6 @@
     line: dhcpd_enable="NO"
     backup: "{{ bsd_dhcpd_backup_conf }}"
   notify: disable and stop dhcpd
-  when: not bsd_dhcpd_enable|bool
+  when: not bsd_dhcpd_enable | bool
 
 # EOF
