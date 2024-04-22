@@ -18,6 +18,7 @@ Major Changes
 Minor Changes
 -------------
 * Fix meta formatting.
+* Update README.
 
 Bugfixes
 --------
