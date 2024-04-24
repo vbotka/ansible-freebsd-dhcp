@@ -19,7 +19,8 @@ Minor Changes
 -------------
 * Fix meta formatting.
 * Update README.
-* Use default rules in local ansible-lint
+* Use default rules in local ansible-lint config.
+* Update skip_list in local ansible-lint config.
 
 Bugfixes
 --------
