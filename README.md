@@ -1,8 +1,10 @@
 # freebsd_dhcp
 
-[![quality](https://img.shields.io/ansible/quality/27910)](https://galaxy.ansible.com/vbotka/freebsd_dhcp)[![Build Status](https://app.travis-ci.com/vbotka/ansible-freebsd-dhcp.svg?branch=master)](https://app.travis-ci.com/vbotka/ansible-freebsd-dhcp)[![GitHub tag](https://img.shields.io/github/v/tag/vbotka/ansible-freebsd-dhcp)](https://github.com/vbotka/ansible-freebsd-dhcp/tags)
+[![quality](https://img.shields.io/ansible/quality/27910)](https://galaxy.ansible.com/vbotka/freebsd_dhcp)
+[![Build Status](https://app.travis-ci.com/vbotka/ansible-freebsd-dhcp.svg?branch=master)](https://app.travis-ci.com/vbotka/ansible-freebsd-dhcp)
+[![GitHub tag](https://img.shields.io/github/v/tag/vbotka/ansible-freebsd-dhcp)](https://github.com/vbotka/ansible-freebsd-dhcp/tags)
 
-[Ansible role.](https://galaxy.ansible.com/vbotka/freebsd_dhcp/) Configure DHCP in FreeBSD.
+[Ansible role.](https://galaxy.ansible.com/vbotka/freebsd_dhcp/) Install and configure DHCP in FreeBSD.
 
 Feel free to [share your feedback and report issues](https://github.com/vbotka/ansible-freebsd-dhcp/issues).
 

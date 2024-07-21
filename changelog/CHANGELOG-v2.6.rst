@@ -10,10 +10,11 @@ vbotka.freebsd_dhcp 2.6 Release Notes
 
 Release Summary
 ---------------
-Bugfix release.
+Ansible 2.17 maintenance update.
 
 Major Changes
 -------------
+* Add supported 14.1
 
 Minor Changes
 -------------
@@ -21,12 +22,8 @@ Minor Changes
 * Update README.
 * Use default rules in local ansible-lint config.
 * Update skip_list in local ansible-lint config.
-
-Bugfixes
---------
-
-Breaking Changes / Porting Guide
---------------------------------
+* Add var bsd_dhcpd_role_version
+* Add listen to lowercase handler names
 
 
 2.6.0
