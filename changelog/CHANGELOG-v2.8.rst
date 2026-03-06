@@ -22,6 +22,11 @@ Minor Changes
 * Update Ansible lint config.
 * Fix Ansible lint.
 * Variables `ansible_` moved to the dictionary ansible_facts
+* Add template dhcpd.conf-minimal.j2
+* Add variables +bsd_dhcpd_rcconfd (default=false), bsd_dhcpd_rcconf
+  (default=[])
+* Use the module community.general.sysrc to configure rc.conf
+
 
 Bugfixes
 --------

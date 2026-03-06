@@ -24,6 +24,9 @@
       bsd_dhcpd_enable: {{ bsd_dhcpd_enable }}
       bsd_dhcpd_backup_conf: {{ bsd_dhcpd_backup_conf }}
       bsd_dhcpd_service: {{ bsd_dhcpd_service }}
+      bsd_dhcpd_rcconfd: {{ bsd_dhcpd_rcconfd }}
+      bsd_dhcpd_rcconf:
+        {{ bsd_dhcpd_rcconf | to_yaml(indent=2) | indent(2) }}
 
       bsd_dhcpd_template: {{ bsd_dhcpd_template }}
       bsd_dhcpd_domain_name: {{ bsd_dhcpd_domain_name }}

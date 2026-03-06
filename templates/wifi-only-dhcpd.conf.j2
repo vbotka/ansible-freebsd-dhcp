@@ -11,7 +11,7 @@ max-lease-time {{ bsd_dhcpd_max_lease_time }};
 ddns-update-style {{ bsd_dhcpd_ddns_update_style }};
 always-broadcast {{ bsd_dhcpd_always_broadcast }};
 log-facility {{ bsd_dhcpd_log_facility }};
-{% if bsd_dhcpd_netbios_name_servers|length > 0 %}
+{% if bsd_dhcpd_netbios_name_servers | length > 0 %}
 option netbios-name-servers {{ bsd_dhcpd_netbios_name_servers }};
 {% endif %}
 {% if bsd_dhcpd_authoritative %}
@@ -20,16 +20,16 @@ authoritative;
 
 ### WIRELESS NETWORK
 subnet {{ bsd_dhcpd_wireless_subnet }}.0 netmask {{ bsd_dhcpd_wireless_netmask }} {
-range {{ bsd_dhcpd_wireless_subnet }}.{{ bsd_dhcpd_wireless_subnet_from }} {{ bsd_dhcpd_wireless_subnet }}.{{ bsd_dhcpd_wireless_subnet_to }};
-option broadcast-address {{ bsd_dhcpd_wireless_subnet }}.255;
-option subnet-mask {{ bsd_dhcpd_wireless_netmask }};
-option routers {{ bsd_dhcpd_wireless_routers }};
+  range {{ bsd_dhcpd_wireless_subnet }}.{{ bsd_dhcpd_wireless_subnet_from }} {{ bsd_dhcpd_wireless_subnet }}.{{ bsd_dhcpd_wireless_subnet_to }};
+  option broadcast-address {{ bsd_dhcpd_wireless_subnet }}.255;
+  option subnet-mask {{ bsd_dhcpd_wireless_netmask }};
+  option routers {{ bsd_dhcpd_wireless_routers }};
 }
 
-{% for (key, value) in bsd_dhcpd_assigned_ip|dictsort %}
+{% for (key, value) in bsd_dhcpd_assigned_ip | dictsort %}
 host {{ key }} {
-        hardware ethernet {{ value.mac }};
-        fixed-address {{ value.ip }};
+  hardware ethernet {{ value.mac }};
+  fixed-address {{ value.ip }};
 }
 {% endfor %}
 

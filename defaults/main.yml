@@ -15,6 +15,10 @@ freebsd_use_packages: true
 freebsd_install_retries: 10
 freebsd_install_delay: 5
 
+# Configure /etc/rc.conf or etc/rc.conf.d/dhcpd
+bsd_dhcpd_rcconfd: false
+bsd_dhcpd_rcconf: []
+
 # packages
 bsd_dhcpd_version: "44"
 bsd_dhcpd_packages:
