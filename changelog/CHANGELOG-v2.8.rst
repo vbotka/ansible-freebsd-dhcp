@@ -18,10 +18,10 @@ Major Changes
 
 Minor Changes
 -------------
-* Update requirements.yml
 * Update README.
 * Update Ansible lint config.
 * Fix Ansible lint.
+* Variables `ansible_` moved to the dictionary ansible_facts
 
 Bugfixes
 --------

@@ -37,11 +37,7 @@ shell> ansible dhcp.example.com -e 'ansible_shell_type=csh ansible_shell_executa
 shell> ansible-galaxy role install vbotka.freebsd_dhcp
 ```
 
-3) Fit variables, for example, in vars
-
-```bash
-shell> editor vbotka.freebsd_dhcp/vars/main.yml
-```
+3) Fit the variables.
 
 4) Create the playbook
 
