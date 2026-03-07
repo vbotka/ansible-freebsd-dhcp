@@ -5,6 +5,21 @@ vbotka.freebsd_dhcp 2.8 Release Notes
 .. contents:: Topics
 
 
+2.8.1
+=====
+
+Release Summary
+---------------
+Add this role to the collection vbotka.freebsd
+
+Major Changes
+-------------
+
+Minor Changes
+-------------
+* Update README.
+
+
 2.8.0
 =====
 
