@@ -1,16 +1,12 @@
 # freebsd_dhcp
 
-[![quality](https://img.shields.io/ansible/quality/27910)](https://galaxy.ansible.com/vbotka/freebsd_dhcp)
+[![quality](https://img.shields.io/ansible/quality/27910)](https://galaxy.ansible.com/vbotka/freebsd_dhcp/)
 [![Build Status](https://app.travis-ci.com/vbotka/ansible-freebsd-dhcp.svg?branch=master)](https://app.travis-ci.com/vbotka/ansible-freebsd-dhcp)
 [![GitHub tag](https://img.shields.io/github/v/tag/vbotka/ansible-freebsd-dhcp)](https://github.com/vbotka/ansible-freebsd-dhcp/tags)
 
-This role is included in the collection [vbotka.freebsd](https://galaxy.ansible.com/ui/repo/published/vbotka/freebsd/) as [vbotka.freebsd.dhcp](https://galaxy.ansible.com/ui/repo/published/vbotka/freebsd/content/role/dhcp)
+This role is included in the collection [vbotka.freebsd](https://galaxy.ansible.com/ui/repo/published/vbotka/freebsd/) as [vbotka.freebsd.dhcp](https://galaxy.ansible.com/ui/repo/published/vbotka/freebsd/content/role/dhcp/)
 
 [Ansible role.](https://galaxy.ansible.com/vbotka/freebsd_dhcp/) Install and configure DHCP in FreeBSD.
-
-Feel free to [share your feedback and report issues](https://github.com/vbotka/ansible-freebsd-dhcp/issues).
-
-[Contributions are welcome](https://github.com/firstcontributions/first-contributions).
 
 
 ## Requirements
@@ -90,17 +86,6 @@ If you use the PF firewall, add the following rules to /etc/pf.conf
 ```
 dhcp_ports="{ bootps, bootpc }"
 pass quick on $if proto { tcp, udp } to $if port $dhcp_ports
-```
-
-
-## Ansible lint
-
-Use the configuration file *.ansible-lint.local* when running
-*ansible-lint*. Some rules might be disabled and some warnings might
-be ignored. See the notes in the configuration file.
-
-```bash
-shell> ansible-lint -c .ansible-lint.local
 ```
 
 
