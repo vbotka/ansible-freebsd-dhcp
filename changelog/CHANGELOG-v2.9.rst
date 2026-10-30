@@ -5,6 +5,20 @@ vbotka.freebsd_dhcp 2.9 Release Notes
 .. contents:: Topics
 
 
+2.9.1
+=====
+
+Release Summary
+---------------
+
+Major Changes
+-------------
+* Supported FreeBSD 14.5 and 15.1
+
+Minor Changes
+-------------
+
+
 2.9.0
 =====
 
