@@ -17,6 +17,9 @@ Major Changes
 
 Minor Changes
 -------------
+* Update main workflow. First configure dhcp then rc.
+* Update rcconf workflow. First configure rc then enable it.
+* Update handlers. Do not restart service if already started.
 
 
 2.9.0

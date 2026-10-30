@@ -23,13 +23,13 @@ Review the defaults and examples in vars.
 
 ## Workflow
 
-1) Change shell on the remote host to /bin/sh if necessary
+1) Change shell on the remote host to /bin/sh if necessary:
 
 ```bash
 shell> ansible dhcp.example.com -e 'ansible_shell_type=csh ansible_shell_executable=/bin/csh' -a 'sudo pw usermod freebsd -s /bin/sh'
 ```
 
-2) Install the role
+2) Install the role:
 
 ```bash
 shell> ansible-galaxy role install vbotka.freebsd_dhcp
@@ -37,7 +37,7 @@ shell> ansible-galaxy role install vbotka.freebsd_dhcp
 
 3) Fit the variables.
 
-4) Create the playbook
+4) Create the playbook:
 
 ```yaml
 shell> cat freebsd-dhcp.yml
@@ -46,7 +46,7 @@ shell> cat freebsd-dhcp.yml
     - role: vbotka.freebsd_dhcp
 ```
 
-5) Run the playbook
+5) Run the playbook:
 
 Test the syntax
 
@@ -54,25 +54,25 @@ Test the syntax
 shell> ansible-playbook --syntax-check  freebsd-dhcp.yml
 ```
 
-Install packages
+Install packages:
 
 ```bash
 shell> ansible-playbook -t bsd_dhcpd_packages -e bsd_dhcpd_install=true freebsd-dhcp.yml
 ```
 
-Look at the variables
+Look at the variables:
 
 ```bash
 shell> ansible-playbook -t bsd_dhcpd_debug -e bsd_dhcpd_debug=true freebsd-dhcp.yml
 ```
 
-Dry run and see what will be configured
+Dry run and see what will be configured:
 
 ```bash
 shell> ansible-playbook --check --diff freebsd-dhcp.yml
 ```
 
-If this is what you want, run the play
+If this is what you want, run the play:
 
 ```bash
 shell> ansible-playbook freebsd-dhcp.yml
